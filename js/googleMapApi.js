@@ -158,9 +158,9 @@ const error = function () {
 //Initialized Map
 function initMap() {
     // Constructor creates a new map - only center and zoom are required.
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: {lat: 26.285822456, lng: 82.228892521},
-        zoom: 6.2
-    });
+    var map = new google.maps.Map(document.getElementById("map"), {
+            center: {lat: 26.285822456, lng: 82.228892521},
+            zoom: 6.2
+        });
     ko.applyBindings(new AppViewModel());
 }
