@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neighborhood Map</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar" id="side-box">
+        <span class="close_icon" onclick="closeNav()">&times;</span>
+        <!-- filtered box -->
+        <div class="search-box">
+            <input data-bind="textInput: filter_list" id="fi-lo-li" placeholder="filter location list" type="text">
+        </div>
+        <div>
+            <h3>Locations:</h3>
+            <!-- unordered list to display data -->
+            <ul data-bind="foreach: show_places">
+                <li data-bind="text: title, click: $parent.showList"></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="nav"><span class="menu_icon" id="menu_icon" onclick="openNav()">&#9776;</span>
+            <h1 class="menu_head">Neighborhood Map</h1>
+
+        </div>
+        <div id="map"></div>
+    </div>
+
+</div>
+<script src="js/script.js"></script>
+<script src="js/googleMapApi.js"></script>
+<script src="js/lib/jquery-3.3.1.min.js"></script>
+<script src="js/lib/knockout.js"></script>
+<script async
+        defer onerror="error()" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAIGSm3wETSXoHSMvPGkNrWFCViKhV8hbo&callback=initMap">
+
+</script>
+
+</body>
+</html>

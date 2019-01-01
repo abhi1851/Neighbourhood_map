@@ -1,0 +1,99 @@
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 100%;
+    position: relative;
+}
+
+/* make the sidebar */
+.sidebar {
+    background: rgb(152, 48, 120);
+    height: 100%;
+    line-height: 35px;
+    padding: 10px 10px 30px 10px;
+    text-align: left;
+    width: 290px;
+    color: #1d1d1d;
+    position: relative;
+}
+
+.main {
+    bottom: 0px;
+    height: 100%;
+    left: 310px;
+    position: absolute;
+    right: 0px;
+}
+
+.nav {
+    background: rgb(152, 48, 120);
+    height: 30px;
+    color: #1d1d1d;
+    padding: 8px 5px;
+}
+
+/* Always set the map height explicitly to define the size of the div element that contains the map. */
+#map {
+    height: 100%;
+
+}
+
+h1 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+.menu_icon {
+    display: none;
+}
+
+.menu_icon, .close_icon {
+    cursor: pointer;
+    padding: 5px 12px;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.close_icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 38px;
+}
+.menu_head{
+    position: absolute;
+    left: 40%;
+    top: -20px;
+}
+input[type='text'] {
+    height: 25px;
+    padding: 0 15px;
+    border-radius: 5px;
+    margin: 50px 0 10px 0;
+}
+/* sidebar unordered list */
+ul li {
+    list-style-type: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    margin-bottom: 8px;
+    border: 2px solid aliceblue;
+    border-radius: 5px;
+    line-height: 18px;
+}
+
+/* sidebar unordered list when mouse over */
+ul li:hover {
+    background-color: rgba(175, 175, 175, 0.4);
+}
+.info{
+    width: 160px !important;
+}
