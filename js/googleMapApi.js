@@ -1,6 +1,6 @@
 "use strict";
 let marker_list = [];
-
+let map;
 // List of location_list
 const location_list = [
     {title: "Gandhi Maidan", location: {lat: 25.61687950677165, lng: 85.14579687308226}},
@@ -158,9 +158,9 @@ const error = function () {
 //Initialized Map
 function initMap() {
     // Constructor creates a new map - only center and zoom are required.
-    var map = new google.maps.Map(document.getElementById("map"), {
-            center: {lat: 26.285822456, lng: 82.228892521},
-            zoom: 6.2
-        });
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: {lat: 26.285822456, lng: 82.228892521},
+        zoom: 6.2
+    });
     ko.applyBindings(new AppViewModel());
 }
